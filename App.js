@@ -1,24 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text } from 'react-native';
-import Task from './src/components/task/Task';
-import Modal from './src/components/modal/Modal';
-// import Home from './src/components/navigation/Home';
-// import Profile from './src/components/navigation/Profile';
-
+import { StyleSheet, View, Text, StatusBar } from 'react-native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { NavigationContainer } from "@react-navigation/native"
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './src/components/movieApp/Home';
-import Movie from './src/components/movieApp/Movie';
+import Home from "./screens/Home"
+import About from './screens/About';
 
+const Stack = createNativeStackNavigator()
 export default function App() {
-  const Stack = createNativeStackNavigator()
   return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home' >
-            {/* <Stack.Screen name='Home' component={Home}/>
-            <Stack.Screen name='Profile' component={Profile}/> */}
-            <Stack.Screen name='Home' component={Home}/>
-            <Stack.Screen name='Movie' component={Movie}/>
+        <Stack.Navigator initialRouteName='Home'>
+          <Stack.Screen 
+            name='Home' 
+            component={Home} 
+            options={{headerShown:false}}
+          />
+          <Stack.Screen name='About' component={About}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
