@@ -14,7 +14,7 @@ export default function App() {
             component={Home} 
             options={{headerShown:false}}
           />
-          <Stack.Screen name='About' component={About}/>
+          <Stack.Screen name='mobile' component={About}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
