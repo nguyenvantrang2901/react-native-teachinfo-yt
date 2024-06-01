@@ -18,15 +18,37 @@ const Footer = () => {
 
       </TouchableOpacity>
 
-      {/* <TouchableOpacity style={styles.iconContainer}>
+      <TouchableOpacity style={styles.iconContainer}>
         <FontAwesome
-          name='home'
-          onPress={()=>alert('Home page')}
+          name='bell'
           style={styles.icon}
         />
-        <Text style={styles.iconText}>Home</Text>
+        <Text  style={[styles.iconText, route.name === 'notification' && styles.active]}>Notifiactions</Text>
+      </TouchableOpacity >
 
-      </TouchableOpacity> */}
+      <TouchableOpacity style={styles.iconContainer}>
+        <FontAwesome
+          name='user-circle'
+          style={styles.icon}
+        />
+        <Text  style={[styles.iconText, route.name === 'user' && styles.active]}>Account</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.iconContainer}>
+        <FontAwesome
+          name='cart-plus'
+          style={styles.icon}
+        />
+        <Text  style={[styles.iconText, route.name === 'cart' && styles.active]}>Cart</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.iconContainer}>
+        <FontAwesome
+          name='sign-out'
+          style={styles.icon}
+        />
+        <Text  style={[styles.iconText, route.name === 'signout' && styles.active]}>Logout</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -44,7 +66,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   icon: {
-    fontSize: 26,
+    fontSize: 22,
     color:'#000000'
   },
   iconText: {
