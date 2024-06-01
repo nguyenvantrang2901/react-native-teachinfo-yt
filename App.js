@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { NavigationContainer } from "@react-navigation/native"
 import Home from "./screens/Home"
 import About from './screens/About';
+import ProductDetail from './screens/ProductDetail';
 
 const Stack = createNativeStackNavigator()
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
             options={{headerShown:false}}
           />
           <Stack.Screen name='mobile' component={About}/>
+          <Stack.Screen name='productDetail' component={ProductDetail}/>
         </Stack.Navigator>
       </NavigationContainer>
   );

@@ -10,7 +10,7 @@ const Header = () => {
     setSearchText("")
   }
   return (
-    <View style={{ height: 90, backgroundColor:'lightgray'}}> 
+    <View style={{ height: 40, backgroundColor:'lightgray'}}> 
       <View style={styles.conatiner}>
         <TextInput 
           style={styles.textInput} 
@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingLeft: 10,
     fontSize: 16,
-    backfaceVisibility: "#ffffff",
+    // backfaceVisibility: "#ffffff",
     color:"#000000",
-    height: 40,
+    height: 35,
     left: 20,
     position:"absolute"
   },

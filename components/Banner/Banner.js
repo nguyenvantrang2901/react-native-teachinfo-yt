@@ -35,7 +35,6 @@ const Banner = () => {
     
       return (
         <View style={styles.container}>
-            {/* <Text>cin chào</Text> */}
             <Carousel
                 pagination={PaginationLight}
                 renderItem={renderItem}
@@ -51,37 +50,36 @@ export default Banner
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+      backgroundColor: "#fff",
+      alignItems: "center",
+      justifyContent: "center",
     },
     cardContainer: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        width,
+      alignItems: "center",
+      justifyContent: "center",
+      width,
     },
     cardWrapper: {
-        borderRadius: 10,
-        overflow: 'hidden',
+      // borderRadius: 8,
+      overflow: "hidden",
     },
     card: {
-        width: width * 1,
-        height: width * 0.5,
+      width: width * 1,
+      height: width * 0.4,
     },
     cornerLabel: {
-        position: 'absolute',
-        bottom: 0,
-        right: 0,
-        borderTopLeftRadius: 8,
+      position: "absolute",
+      bottom: 0,
+      right: 0,
+      borderTopLeftRadius: 8,
     },
     cornerLabelText: {
-        fontSize: 12,
-        color: '#fff',
-        fontWeight: '600',
-        paddingLeft: 5,
-        paddingRight: 5,
-        paddingTop: 2,
-        paddingBottom: 2,
-    }
-})
+      fontSize: 12,
+      color: "#fff",
+      fontWeight: "600",
+      paddingLeft: 5,
+      paddingRight: 5,
+      paddingTop: 2,
+      paddingBottom: 2,
+    },
+  });
