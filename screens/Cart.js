@@ -39,8 +39,7 @@ const Cart = ({navigation}) => {
 
             <TouchableOpacity 
                 onPress={
-                    // ()=>navigation.navigate('Home')
-                    ()=>{alert('Thanh toán')}
+                    ()=>navigation.navigate('checkout')
                 }
                 style={styles.btnCheckout}
             >
