@@ -48,7 +48,13 @@ const Footer = () => {
         <Text  style={[styles.iconText, route.name === 'cart' && styles.active]}>Cart</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.iconContainer}>
+      <TouchableOpacity 
+        style={styles.iconContainer}
+        onPress={()=>{
+          alert("Đăng xuất thành công")
+          navigation.navigate('login')
+        }}
+      >
         <FontAwesome
           name='sign-out'
           style={[styles.icon,route.name === 'signout' && styles.active]}
