@@ -6,7 +6,7 @@ import Layout from "../components/Layout/Layout"
 
 const ProductDetail = ({route}) => {
   const [proDetail, setProDetail] = useState({})
-  const [qty, setQty] = useState(2)
+  const [qty, setQty] = useState(1)
 
   useEffect(()=>{
     // find product detail
@@ -43,7 +43,11 @@ const ProductDetail = ({route}) => {
           <TouchableOpacity 
             onPress={handlerAddToCart}
             style={styles.btnCart}>
-            <Text style={styles.btnText}>Add to cart</Text>
+            <Text style={styles.btnText}>
+              {
+                proDetail?.quantity > 0 ? "Add to cart" : "Out of stock"
+              }
+            </Text>
           </TouchableOpacity>
 
           <View style={styles.btnContainer}>
