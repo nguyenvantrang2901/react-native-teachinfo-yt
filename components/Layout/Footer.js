@@ -29,12 +29,15 @@ const Footer = () => {
         <Text  style={[styles.iconText, route.name === 'notification' && styles.active]}>Notifiactions</Text>
       </TouchableOpacity >
 
-      <TouchableOpacity style={styles.iconContainer}>
+      <TouchableOpacity 
+        style={styles.iconContainer}
+        onPress={()=>navigation.navigate("account")}
+      >
         <FontAwesome
           name='user-circle'
-          style={[styles.icon,route.name === 'user' && styles.active]}
+          style={[styles.icon,route.name === 'account' && styles.active]}
         />
-        <Text  style={[styles.iconText, route.name === 'user' && styles.active]}>Account</Text>
+        <Text  style={[styles.iconText, route.name === 'account' && styles.active]}>Account</Text>
       </TouchableOpacity>
 
       <TouchableOpacity 

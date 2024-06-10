@@ -8,8 +8,10 @@ const Register = () => {
     const [password, setPassword] = useState('')
     const [rePassword, setRePassword] = useState('')
     const [name, setName] = useState('')
+    const [city, setCity] = useState('')
+    const [contact, setContact] = useState('')
     const handleRegister = () => {
-        if(!name || !email || !password || !rePassword){
+        if(!name || !email || !password || !rePassword || !city || !contact){
            return alert("Phải điền đủ thông tin")
         }
         alert("Đăng ký thành công ")
@@ -42,6 +44,7 @@ const Register = () => {
             setValue={setPassword}
             placeholder={'Mật khẩu'}
             secureTextEntry={true}
+            autoComplete={'current-password'}
         />
         <Inputbox
             style={styles.input}
@@ -49,6 +52,21 @@ const Register = () => {
             setValue={setRePassword}
             placeholder={'Nhập lại mật khẩu'}
             secureTextEntry={true}
+            autoComplete={'current-password'}
+        />
+        <Inputbox
+            style={styles.input}
+            value={city}
+            setValue={setCity}
+            placeholder={'Nhập địa chỉ'}
+            autoComplete={'address-line1'}
+        />
+        <Inputbox
+            style={styles.input}
+            value={contact}
+            setValue={setContact}
+            placeholder={'Nhập số điện thoại'}
+            autoComplete={'tel'}
         />
         <View style={styles.buttonContainer}>
             <Button 
