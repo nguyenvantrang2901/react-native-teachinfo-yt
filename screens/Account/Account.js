@@ -4,7 +4,7 @@ import Layout from '../../components/Layout/Layout'
 import { UserData } from '../../data/dataUser'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-const Account = () => {
+const Account = ({navigation}) => {
   return (
     <Layout>
       <View style={styles.container}>
@@ -23,7 +23,9 @@ const Account = () => {
         </View>
         <View style={styles.btnContainer}>
           <Text style={styles.heading}>Account Setting</Text>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity 
+            onPress={()=>navigation.navigate("profile", {id: UserData?._id})}
+            style={styles.btn}>
               <FontAwesome name='edit' style={styles.btnText}/>
               <Text style={styles.btnText}>Edit Profile</Text>
           </TouchableOpacity>
@@ -31,7 +33,9 @@ const Account = () => {
               <FontAwesome name='list' style={styles.btnText}/>
               <Text style={styles.btnText}>My Order</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity 
+            onPress={()=>navigation.navigate('notifications')}
+          style={styles.btn}>
               <FontAwesome name='bell' style={styles.btnText}/>
               <Text style={styles.btnText}>Notifications</Text>
           </TouchableOpacity>

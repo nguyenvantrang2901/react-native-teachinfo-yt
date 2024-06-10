@@ -10,23 +10,25 @@ const Footer = () => {
     <View style={styles.container}>
       <TouchableOpacity
           style={styles.iconContainer}
-          onPress={()=>navigation.navigate("home")}
+          onPress={()=>navigation.navigate("Home")}
       >
         <FontAwesome
           name='home'
-          onPress={()=>alert('Home page')}
+          // onPress={()=>alert('Home page')}
           style={[styles.icon, route.name === "Home" && styles.active]}
         />
         <Text style={[styles.iconText, route.name === 'Home' && styles.active]}>Home</Text>
 
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.iconContainer}>
+      <TouchableOpacity 
+        onPress={()=>navigation.navigate("notifications")}
+        style={styles.iconContainer}>
         <FontAwesome
           name='bell'
           style={[styles.icon,route.name === 'bell' && styles.active]}
         />
-        <Text  style={[styles.iconText, route.name === 'notification' && styles.active]}>Notifiactions</Text>
+        <Text  style={[styles.iconText, route.name === 'notifications' && styles.active]}>Notifications</Text>
       </TouchableOpacity >
 
       <TouchableOpacity 

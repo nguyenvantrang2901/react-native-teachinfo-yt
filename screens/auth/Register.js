@@ -44,7 +44,7 @@ const Register = () => {
             setValue={setPassword}
             placeholder={'Mật khẩu'}
             secureTextEntry={true}
-            autoComplete={'current-password'}
+            autoComplete={'password'}
         />
         <Inputbox
             style={styles.input}
