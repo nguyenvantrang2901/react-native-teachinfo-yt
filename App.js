@@ -13,6 +13,7 @@ import Account from './screens/Account/Account';
 import Profile from './screens/Account/Profile';
 import Notifications from './screens/Account/Notifications';
 import MyOrders from './screens/Account/MyOrders';
+import Dashboard from './screens/Admin/Dashboard';
 
 const Stack = createNativeStackNavigator()
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
           <Stack.Screen name='profile' component={Profile}/>
           <Stack.Screen name='notifications' component={Notifications}/>
           <Stack.Screen name='orders' component={MyOrders}/>
+          <Stack.Screen name='adminPanel' component={Dashboard}/>
           <Stack.Screen 
             name='login'
             component={Login}

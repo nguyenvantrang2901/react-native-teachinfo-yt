@@ -41,7 +41,10 @@ const Account = ({navigation}) => {
               <FontAwesome name='bell' style={styles.btnText}/>
               <Text style={styles.btnText}>Notifications</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity 
+            onPress={()=>navigation.navigate("adminPanel", {id: UserData?._id})}
+            style={styles.btn}
+          >
               <FontAwesome name='users' style={styles.btnText}/>
               <Text style={styles.btnText}>Admin Panel</Text>
           </TouchableOpacity>
