@@ -29,7 +29,9 @@ const Account = ({navigation}) => {
               <FontAwesome name='edit' style={styles.btnText}/>
               <Text style={styles.btnText}>Edit Profile</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity 
+            onPress={()=>navigation.navigate("orders", {id: UserData?._id})}
+            style={styles.btn}>
               <FontAwesome name='list' style={styles.btnText}/>
               <Text style={styles.btnText}>My Order</Text>
           </TouchableOpacity>
